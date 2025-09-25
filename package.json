@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon --env-file=.env ./app/app.js",
-    "makemigration" : "npx knex migrate:make --knexfile ./app/database/knexfile.js", 
-    "migrate" : "npx knex migrate:latest --knexfile ./app/database/knexfile.js"
+    "makemigration": "npx knex migrate:make --knexfile ./app/database/knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile ./app/database/knexfile.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "connect-sqlite3": "^0.9.16",
     "nodemon": "^3.1.10"
   }
 }

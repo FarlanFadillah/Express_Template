@@ -4,6 +4,9 @@ const cors = require('cors');
 const process = require('process');
 const path = require('path');
 
+// middlewares
+const session = require('./middlewares/session.middleware');
+
 const app = express();
 
 // router imports
@@ -14,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 app.use(morgan('dev'));
 app.use(cors());
+app.use(session); // use the session middleware for every request
 
 // set the static folder (js/css)
 app.use(express.static(path.join(__dirname, '../public/static')))
